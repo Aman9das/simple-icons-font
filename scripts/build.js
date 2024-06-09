@@ -49,7 +49,7 @@ const cssDecodeUnicode = (value) => {
 const buildSimpleIconsSvgFontFile = async () => {
   const usedUnicodes = [];
   const unicodeHexBySlug = [];
-  let startUnicode = 0xea01;
+  let startUnicode = 0x3400;
   let glyphsContent = '';
 
   for (const si in simpleIcons) {
@@ -65,7 +65,7 @@ const buildSimpleIconsSvgFontFile = async () => {
 
     const icon = simpleIcons[si];
     const verticalTransformedPath = SVGPath(icon.path)
-      .translate(0, -20)
+      .translate(0, -26)
       .scale(50, -50)
       .round(6)
       .toString();
